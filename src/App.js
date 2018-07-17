@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import Home from "./Components/Home";
 import Upgrade from "./Components/Upgrade";
-import Redirect from "./Components/Redirect";
+import ErrorPage from "./Components/ErrorPage";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 class App extends Component {
@@ -46,12 +46,13 @@ class App extends Component {
               </ul>
             </div>
           </nav>
-
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route path="/upgrade" component={Upgrade} />
-            <Route component={Redirect} />
-          </Switch>
+          <div className="container-fluid">
+            <Switch>
+              <Route exact path="/" component={Home} />
+              <Route path="/upgrade" component={Upgrade} />
+              <Route component={ErrorPage} />
+            </Switch>
+          </div>
         </div>
       </Router>
     );
