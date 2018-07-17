@@ -3,16 +3,56 @@ import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import Home from "./Components/Home";
 import Upgrade from "./Components/Upgrade";
 import Redirect from "./Components/Redirect";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 class App extends Component {
   render() {
     return (
       <Router>
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route path="/upgrade" component={Upgrade} />
-          <Route component={Redirect} />
-        </Switch>
+        <div>
+          <nav className="navbar navbar-expand-lg navbar-light bg-light">
+            <button
+              className="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span className="navbar-toggler-icon" />
+            </button>
+
+            <div
+              className="collapse navbar-collapse"
+              id="navbarSupportedContent"
+            >
+              <ul className="navbar-nav mr-auto">
+                <li className="nav-item" routerLinkActive="active">
+                  <Link className="nav-link" to="/">
+                    Hello
+                  </Link>
+                </li>
+                <li className="nav-item" routerLinkActive="active">
+                  <Link className="nav-link" to="/upgrade">
+                    Upgrade
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/redirect">
+                    404 error
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          </nav>
+
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route path="/upgrade" component={Upgrade} />
+            <Route component={Redirect} />
+          </Switch>
+        </div>
       </Router>
     );
   }
