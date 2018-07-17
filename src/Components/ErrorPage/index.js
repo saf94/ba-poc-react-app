@@ -33,9 +33,9 @@ class ErrorPage extends Component {
     return this.state.shouldRedirect ? (
       <Redirect to="/" />
     ) : (
-      <div>
+      <div className="text-center">
         <h1>404 page not found</h1>
-        <p>redirecting home in {this.state.redirectTimer} seconds</p>
+        redirecting home in {this.state.redirectTimer} seconds
       </div>
     );
   }

@@ -28,12 +28,12 @@ class App extends Component {
               id="navbarSupportedContent"
             >
               <ul className="navbar-nav mr-auto">
-                <li className="nav-item" routerLinkActive="active">
+                <li className="nav-item">
                   <Link className="nav-link" to="/">
                     Hello
                   </Link>
                 </li>
-                <li className="nav-item" routerLinkActive="active">
+                <li className="nav-item">
                   <Link className="nav-link" to="/upgrade">
                     Upgrade
                   </Link>
