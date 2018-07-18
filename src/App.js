@@ -30,7 +30,7 @@ class App extends Component {
               <ul className="navbar-nav mr-auto">
                 <li className="nav-item">
                   <Link className="nav-link" to="/">
-                    Hello
+                    Home
                   </Link>
                 </li>
                 <li className="nav-item">
@@ -40,7 +40,7 @@ class App extends Component {
                 </li>
                 <li className="nav-item">
                   <Link className="nav-link" to="/redirect">
-                    404 error
+                    404 test
                   </Link>
                 </li>
               </ul>
