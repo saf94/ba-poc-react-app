@@ -12,10 +12,19 @@ function Step3({ startAtRight }) {
 
       <img
         src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/White_check.svg/2000px-White_check.svg.png"
-        className="check mt-4 mb-2"
-        hidden
+        className={
+          startAtRight
+            ? "revealCheck check mt-4 mb-2"
+            : "check hideCheck mt-4 mb-2"
+        }
       />
-      <div className="font-s" hidden>
+      <div
+        className={
+          startAtRight
+            ? "font-s animated bounceIn upgradedMessageShow"
+            : "font-s upgradedMessageHidden"
+        }
+      >
         Outbound flight upgraded
       </div>
     </div>

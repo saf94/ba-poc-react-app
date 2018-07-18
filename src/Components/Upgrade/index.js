@@ -4,6 +4,7 @@ import Step2 from "./step2.js";
 import Step3 from "./step3.js";
 import "./upgrade.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "animate.css/animate.min.css";
 
 class Upgrade extends Component {
   constructor(props) {
