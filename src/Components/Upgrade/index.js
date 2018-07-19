@@ -53,24 +53,21 @@ class Upgrade extends Component {
     this.setState({ options: newOptions });
   };
 
-  renderStep = () => {
-    return (
-      <div>
-        <Step1 nextStep={this.nextStep} shown={this.state.step[0]} />
-        <Step2
-          nextStep={this.nextStep}
-          options={this.state.options}
-          chooseOption={this.chooseOption}
-          shown={this.state.step[1]}
-          hidden={this.state.step[2]}
-        />
-        <Step3 shown={this.state.step[2]} />
-      </div>
-    );
-  };
   render() {
     return (
-      <div className="upgrade-business text-center">{this.renderStep()}</div>
+      <div className="upgrade-business text-center">
+        <div>
+          <Step1 nextStep={this.nextStep} shown={this.state.step[0]} />
+          <Step2
+            nextStep={this.nextStep}
+            options={this.state.options}
+            chooseOption={this.chooseOption}
+            shown={this.state.step[1]}
+            hidden={this.state.step[2]}
+          />
+          <Step3 shown={this.state.step[2]} />
+        </div>
+      </div>
     );
   }
 }
