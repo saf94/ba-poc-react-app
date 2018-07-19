@@ -1,5 +1,10 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  NavLink,
+  Switch
+} from "react-router-dom";
 import Home from "./Components/Home";
 import Upgrade from "./Components/Upgrade";
 import ErrorPage from "./Components/ErrorPage";
@@ -12,37 +17,35 @@ class App extends Component {
       <Router>
         <div>
           <nav className="navbar navbar-expand-lg navbar-light bg-light">
-            <button
-              className="navbar-toggler"
-              type="button"
-              data-toggle="collapse"
-              data-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span className="navbar-toggler-icon" />
-            </button>
-
-            <div
-              className="collapse navbar-collapse"
-              id="navbarSupportedContent"
-            >
+            <div className="navbar-collapse">
               <ul className="navbar-nav mr-auto">
                 <li className="nav-item">
-                  <Link className="nav-link" to="/">
+                  <NavLink
+                    className="nav-link"
+                    exact
+                    to="/"
+                    activeClassName="active"
+                  >
                     Home
-                  </Link>
+                  </NavLink>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/upgrade">
+                  <NavLink
+                    className="nav-link"
+                    to="/upgrade"
+                    activeClassName="active"
+                  >
                     Upgrade
-                  </Link>
+                  </NavLink>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/redirect">
+                  <NavLink
+                    className="nav-link"
+                    to="/redirect"
+                    activeClassName="active"
+                  >
                     404 test
-                  </Link>
+                  </NavLink>
                 </li>
               </ul>
             </div>
@@ -50,7 +53,7 @@ class App extends Component {
           <div className="container-fluid">
             <Switch>
               <Route exact path="/" component={Home} />
-              <Route path="/upgrade" component={Upgrade} />
+              <Route exact path="/upgrade" component={Upgrade} />
               <Route component={ErrorPage} />
             </Switch>
           </div>

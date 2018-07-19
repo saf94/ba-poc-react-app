@@ -10,3 +10,7 @@ body {
 nav a.active {
   color: #039be5;
 }
+
+.active {
+  color: black;
+}
