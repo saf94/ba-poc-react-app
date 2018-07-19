@@ -1,16 +1,8 @@
 import React from "react";
 
-function Step1({ nextStep, startAtRight, slideToLeft }) {
+function Step1({ nextStep, shown }) {
   return (
-    <div
-      className={
-        startAtRight
-          ? slideToLeft
-            ? "step step1"
-            : "step step1"
-          : "step step1 slideToLeft"
-      }
-    >
+    <div className={shown ? "step step1" : "step step1 animated slideOutLeft"}>
       <h3>Upgrade to business</h3>
 
       <div className="one-way mt-5 font-s">one way from</div>

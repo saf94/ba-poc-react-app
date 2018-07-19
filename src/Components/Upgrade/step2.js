@@ -1,14 +1,14 @@
 import React from "react";
 
-function Step2({ options, chooseOption, nextStep, startAtRight, slideToLeft }) {
+function Step2({ options, chooseOption, nextStep, shown, hidden }) {
   return (
     <div
       className={
-        slideToLeft
-          ? "step step2 slideToLeft"
-          : startAtRight
-            ? "step step2"
-            : "step step2 startAtRight"
+        shown
+          ? "step step2 animated slideInRight"
+          : hidden
+            ? "step step2 animated slideOutLeft"
+            : "step step2 hidden"
       }
     >
       <h5>Upgrade to business</h5>
