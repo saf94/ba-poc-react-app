@@ -4,6 +4,7 @@ import Home from "./Components/Home";
 import Upgrade from "./Components/Upgrade";
 import ErrorPage from "./Components/ErrorPage";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
 
 class App extends Component {
   render() {

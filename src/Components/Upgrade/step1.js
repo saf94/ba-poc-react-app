@@ -1,6 +1,6 @@
 import React from "react";
 
-function Step1({ nextStep, shown, hidden }) {
+function Step1({ nextStep, shown }) {
   return (
     <div className={shown ? "step step1" : "step step1 animated slideOutLeft"}>
       <h3>Upgrade to business</h3>

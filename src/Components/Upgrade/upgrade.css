@@ -90,14 +90,16 @@ h3 {
   visibility: hidden;
 }
 
-.startAtRight {
-  visibility: hidden;
-  position: absolute;
-  left: 300px;
+.font-s {
+  font-size: 0.8rem
 }
 
-.slideToLeft {
-  visibility: hidden;
-  position: absolute;
-  left: -300px;
+.font-xxl {
+  font-size: 3rem;
 }
+
+.font-l {
+  font-size: 1.2rem;
+}
+
+

@@ -56,11 +56,7 @@ class Upgrade extends Component {
   renderStep = () => {
     return (
       <div>
-        <Step1
-          nextStep={this.nextStep}
-          shown={this.state.step[0]}
-          hidden={this.state.step[1]}
-        />
+        <Step1 nextStep={this.nextStep} shown={this.state.step[0]} />
         <Step2
           nextStep={this.nextStep}
           options={this.state.options}
