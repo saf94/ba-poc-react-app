@@ -1,4 +1,3 @@
-
 .upgrade-business {
   color: #fff;
   max-width: 300px;
@@ -25,7 +24,7 @@ h3 {
   position: absolute;
   transition: 1s;
   left: 0px;
-  visibility: visible; 
+  visibility: visible;
 }
 .one-way {
   text-transform: uppercase;
@@ -87,16 +86,18 @@ h3 {
   cursor: pointer;
 }
 
+.hidden {
+  visibility: hidden;
+}
+
 .startAtRight {
-  
   visibility: hidden;
   position: absolute;
-  left: 300px; 
+  left: 300px;
 }
 
 .slideToLeft {
   visibility: hidden;
   position: absolute;
-  left: -300px; 
+  left: -300px;
 }
-

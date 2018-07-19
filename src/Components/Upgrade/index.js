@@ -54,34 +54,21 @@ class Upgrade extends Component {
   };
 
   renderStep = () => {
-    // if (this.state.step === 1) {
-    //   return <Step1 nextStep={this.nextStep} />;
-    // } else if (this.state.step === 2) {
-    //   return (
-    //     <Step2
-    //       nextStep={this.nextStep}
-    //       options={this.state.options}
-    //       chooseOption={this.chooseOption}
-    //     />
-    //   );
-    // } else {
-    //   return <Step3 />;
-    // }
     return (
       <div>
         <Step1
           nextStep={this.nextStep}
-          startAtRight={this.state.step[0]}
-          slideToLeft={this.state.step[1]}
+          shown={this.state.step[0]}
+          hidden={this.state.step[1]}
         />
         <Step2
           nextStep={this.nextStep}
           options={this.state.options}
           chooseOption={this.chooseOption}
-          startAtRight={this.state.step[1]}
-          slideToLeft={this.state.step[2]}
+          shown={this.state.step[1]}
+          hidden={this.state.step[2]}
         />
-        <Step3 startAtRight={this.state.step[2]} />
+        <Step3 shown={this.state.step[2]} />
       </div>
     );
   };
